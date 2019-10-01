@@ -1,0 +1,102 @@
+body {
+  font: 14px "Times New Roman", Times, Arial, sans-serif;
+  padding: 40px;
+  margin: 0;
+  color: #0066ff;
+  text-align: center;
+  background-image: url("Project_Image.jpg");
+}
+
+.flexHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+a {
+  color: #0066FF;
+}
+
+body select {
+  padding: 20px 70px 10px 13px;ss
+  max-width: 100%;
+  height: auto;
+  border: 0.7px solid #e3e3e3;
+  border-radius: 3px;
+  color: #0066ff;
+  line-height: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+body select option {
+  padding: 0 4px;
+}
+
+.Info {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.Info .Infotext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #0066FF;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.Info .Infotext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+
+.Info .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+
+select::-ms-expand {
+  display: none;
+}
+
+select:disabled::-ms-expand {
+  background: #0066ff;
+}

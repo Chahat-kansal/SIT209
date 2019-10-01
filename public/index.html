@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Adding jquery Libraries-->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Including the  chart-device-data.js File -->
+    <script src="js/chart-device-data.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Inserting the CSS style Sheet-->   
+   <link href="css/style.css" rel="stylesheet" />
+
+    <title>SIT209 Smart  Home Project</title>
+</head>
+
+<body>
+    <h1 class="flexHeader">
+        <span>
+            <span id="Count">0 devices</span>
+            <select id="listOfDevices" class="select_box"></select>
+        </span>
+        <span>SIT209 Smart  Home Project</span>
+		   </h1>
+		   
+ <!--Inserting the Graph to the page After Sending all the data from the server-->
+	<div>
+        <canvas id="iotChart"></canvas>
+	</div>
+	
+	<!-- Creating a Popup message to give all the information about teh page to  the user--> 		
+	<div class="Info" onclick="myFunction()">Click Here to read the information
+  <span class="Infotext" id="InfoPopup">This webpage shows the real time temperature and humidity with time, In the graph the red lines are showing the temperature and the green lines are showing the humidity, you can change the view anytime of the graph for e.g if you don't want to see the temperature or the humidity at the same time you can turn them off anytimeby simply clicking on the Temp and Humx buttons on the top of the graph</span>
+</div>
+
+	<script>
+	function myFunction() {
+  var Info = document.getElementById("InfoPopup");
+  Info.classList.toggle("show");
+}
+</script>
+</body>
+
+</html>
